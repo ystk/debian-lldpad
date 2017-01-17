@@ -1,0 +1,84 @@
+lldpad (0.9.46-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with -fgnu89-inline, fix build errors with new warnings.
+    Closes: #790647.
+
+ -- Matthias Klose <doko@debian.org>  Sat, 25 Jul 2015 13:35:05 +0200
+
+lldpad (0.9.46-3) unstable; urgency=low
+
+  * Added myself as a maintainer of this package.
+  * Applied upstream's patch to switch to libnl-3.
+  * Updated the standards version to 3.9.6; no changes required.
+  * Added a lintian override for liblldp-clif1 packaged in lldapd.
+  * Prevent lldpad from being started at install (it breaks).
+
+ -- Jacob Luna Lundberg <jacob@gnifty.net>  Thu, 23 Oct 2014 14:51:55 -0700
+
+lldpad (0.9.46-2) unstable; urgency=medium
+
+  * Add patch to fix build failure. Thanks Hideki Yamane
+  * debian/patches
+    - add specify_subdir-objects.patch (Closes: #725579)
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Wed, 12 Feb 2014 23:29:32 +0530
+
+lldpad (0.9.46-1) unstable; urgency=low
+
+  * [8e5431e] Imported Upstream version 0.9.46
+  * [4b269d3] Refresh patches
+  * [a1194ea] Add README.source
+  * [49b09fb] update Vcs links
+  * [baf5d63] Add Hardening build
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Tue, 16 Jul 2013 19:48:41 +0530
+
+lldpad (0.9.44-1) unstable; urgency=low
+
+  [ Liang Guo ]
+  * New upstream release
+  * Replase libconfig8-dev to libconfig-dev (Closes: #661408)
+  * debian/control:
+    - Bump Standards-Version to 3.9.3
+    - Add libreadline-dev to Build-Depends
+  * debian/copyright:
+    - Update download link
+    - Update copyright information
+
+  [ Ritesh Raj Sarraf ]
+  * [167d25a] Install empty folder for lldpad (Closes: #669540)
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Sat, 28 Apr 2012 16:37:33 +0530
+
+lldpad (0.9.43+git20111215.c0498b-1) unstable; urgency=low
+
+  * New upstream release
+  * Upload to unstable
+  * debian/control:
+    - Update homepage
+    - Add libnl-dev, flex, dh-autoreconf to Build-Depends
+  * debian/rules: use dh_autoreconf to deal bootstrap.sh issue
+  * debian/source/options: ignore ylwrap changes, dh-autoreconf
+    update it when compiling
+  * debian/patches:
+    - Remove dont-use-embedded-libconfig.patch, not necessary. 
+    - Add fix-hyphen-used-as-minus-sign-in-lldptool-app-8.patch
+    - Add fix-typo-in-config-c.patch
+    - Add fix-typo-in-lldptool-ets-8.patch
+    - Refresh others
+
+ -- Liang Guo <bluestonechina@gmail.com>  Thu, 15 Dec 2011 22:58:32 +0800
+
+lldpad (0.9.38-1) experimental; urgency=low
+
+  [ Liang Guo ]
+  * Initial release (Closes: #605798)
+
+  [ Ritesh Raj Sarraf ]
+  * Also close dcbd ITP since it was renamed to lldpad (Closes: #572457) 
+  * [7588ce3] make lintian clean
+  * [e22837b] fix maintainer email address
+  * [46eb869] clarify LGPL license in copyright
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Fri, 29 Apr 2011 13:54:41 +0530
